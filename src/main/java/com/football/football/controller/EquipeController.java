@@ -22,7 +22,7 @@ public class EquipeController {
     private EquipeRepository equipeRepository;
 
     @GetMapping
-    public Page<Equipe> getEquipes(@PageableDefault(page = 0, size = 10)
+    public Page<Equipe> getEquipes(@PageableDefault(page = 0, size = 2)
                                        @SortDefault.SortDefaults({
                                                @SortDefault(sort = "name", direction = Sort.Direction.ASC),
                                                @SortDefault(sort = "acronym", direction = Sort.Direction.ASC),

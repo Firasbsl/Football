@@ -1,5 +1,6 @@
 package com.football.football.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +22,7 @@ public class Equipe {
     private String acronym;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "equipe")
+    @JsonManagedReference
     private List<Joueur> joueurs;
 
     @Column(nullable = false)
